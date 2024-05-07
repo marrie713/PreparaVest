@@ -1,10 +1,14 @@
-import Footer from './components/footer';
-import Cabeçalho from './components/header';
+
+import Cadastro from './screens/Cadastro';
+import Login from './screens/Login';
+import PaginaEnem from './screens/pgENEM';
+import Home from './screens/home';
 
 export default function App(){
   return(
-    <Footer/>
-    
+  
+    <Home/>
+   
   );
 }
 
