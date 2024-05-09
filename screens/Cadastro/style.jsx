@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native";
 export const style = StyleSheet.create({
 
     header: {
-      height:500,
-      width:400,
+      height:450,
+      width:350,
       backgroundColor: "#FCFCFC",
       borderRadius: 10,
       justifyContent: "center",
@@ -21,20 +21,20 @@ export const style = StyleSheet.create({
     
     TextInput: {
       backgroundColor: "#d9d9d9",
-      height: 60,
-      width: 350,
+      height: 50,
+      width: 300,
       margin: 12,
       borderRadius: 10,
       padding:20,
       color: '#797976',
-      fontSize: 18
+      fontSize: 18,
       
     },
     botao: {
       height: 50,
-      width: 120,
+      width: 100,
       backgroundColor: '#4776DF',
-      borderRadius: 5,
+      borderRadius: 10,
       justifyContent: "center",
       alignItems: "center",
       margin:16,
@@ -42,7 +42,7 @@ export const style = StyleSheet.create({
   titulo: {
     textAlign: 'center',
     color: "#000",
-    fontSize: 45,
+    fontSize: 40,
   },
 
   Logo: {

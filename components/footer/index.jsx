@@ -1,9 +1,7 @@
 import { View, Text, TextInput, TouchableOpacity, Image, Linking } from "react-native";
 import { footerestilo } from "./style";
 
-
-
-export default function Footer(){
+export default function FooterComponent(){
     return(
             <View style={footerestilo.footer}>
                 <View style={footerestilo.esquerdo}>
