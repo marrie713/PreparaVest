@@ -18,11 +18,11 @@ export const estilobotoes = StyleSheet.create({
       },
 
       espacopv:{
-         flexWrap:'wrap',
          flexDirection:'row',
          margin: 15,
-         alignItems: 'center',
+         alignItems: 'flex-start',
          justifyContent: 'flex-start',
+         marginTop: 100
          
      },
 

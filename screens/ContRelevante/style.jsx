@@ -13,8 +13,7 @@ export const estilo = StyleSheet.create({
       },
 
     espacopv:{
-       flexWrap:'wrap',
-        flexDirection:'row',
+        flexDirection:'column',
         margin:15,
         alignItems: 'center',
         justifyContent: 'center',
@@ -53,5 +52,54 @@ export const estilo = StyleSheet.create({
     },
     categoria:{
         margin:6
+    },
+
+    conteudo: {
+        flexDirection: 'column',
+        
+    },
+
+    Materias: {
+        fontSize: 20,
+        fontFamily: 'KollektifBold',
+        textAlign: 'center'
+    },
+
+    professores: {
+        flexDirection: 'row',
+        shadowColor: '#171717',
+        shadowOffset: {width: -4, height: 8},
+        shadowOpacity: 0.3,
+        shadowRadius: 15,
+        padding: 20,
+        borderRadius: 25
+
+        
+    },
+
+    container: {
+        gap: 50,
+        marginLeft: 50,
+        marginBottom: 20, 
+        
+
+    },
+
+    Perfil: {
+        borderRadius: 100
+    },
+
+    biografia: {
+        width: 550,
+        marginLeft: 50,
+        fontFamily: 'Kollektif'
+
+    },
+
+    textosMaterias: {
+        fontSize: 20,
+        fontFamily: 'KollektifBold',
+        marginTop: 30,
+        marginLeft: 50
     }
 })

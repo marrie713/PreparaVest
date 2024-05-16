@@ -22,7 +22,7 @@ export default function HomeScreen(){
                             Explore nossos recursos de estudo de alta qualidade 
                             e comece sua jornada rumo ao sucesso acadêmico hoje mesmo!</Text>
                         <Text style={{fontSize: 30, fontWeight: 'bold'}}> Por onde começar?!</Text>
-                        <TouchableOpacity style={paginapv.butao} onPress={()=> navigation.navigate("PaginaEnem")}>
+                        <TouchableOpacity style={paginapv.butao} onPress={()=> navigation.navigate("Pagina Enem")}>
                             <Text style={paginapv.enemTexto}> ENEM</Text>
                         </TouchableOpacity>
                     </View>

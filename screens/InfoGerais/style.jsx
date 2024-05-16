@@ -12,15 +12,13 @@ export const estilo = StyleSheet.create({
         fontFamily: 'KollektifBold',
         textAlign: 'center',
         fontSize:25,
-        marginBottom:30,
-        marginTop: 30
       },
 
     espacopv1:{
         fontFamily: 'KollektifBold',
         textAlign:'left',
         width:1000,
-        height:480,
+        height:520,
     },
 
     //style desta pagina//
@@ -39,5 +37,12 @@ export const estilo = StyleSheet.create({
         alignItems: 'center',
         marginTop:5
     },
+
+    linkEnem: {
+        fontFamily: 'KollektifBold',
+        fontSize: 20,
+        textDecorationLine: 'underline',
+        color: '#FFB74B'
+    }
  
 })

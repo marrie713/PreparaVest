@@ -26,8 +26,8 @@ export default function Cabecalho(){
                 />
             </View>
             <View style={style.subtitulo}>
-                <Text style={{fontSize: 22}} onPress={()=> navigation.navigate("HomeScreen")}>Home</Text>
-                <Text style={{fontSize: 22}} onPress={()=> navigation.navigate("PaginaEnem")}>Enem</Text>
+                <Text style={{fontSize: 22}} onPress={()=> navigation.navigate("Home")}>Home</Text>
+                <Text style={{fontSize: 22}} onPress={()=> navigation.navigate("Pagina Enem")}>Enem</Text>
                 <Text style={{fontSize: 22}} >Sobre nós</Text>
             </View>
             <Icon

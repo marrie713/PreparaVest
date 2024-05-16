@@ -31,8 +31,7 @@ export default function Informacoes() {
     loadFonts();
   }, []);
 
-  return (
-
+  return ( 
 
     <View>
         <Cabecalho/>
@@ -56,9 +55,8 @@ export default function Informacoes() {
                 As inscrições são feitas online no site oficial, onde os candidatos preenchem um formulário.
               </Text>
               <Pressable
-                onPress={() => window.open('https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem', 'Vestibular')}
-                style={estilo.textos}   >
-                Site oficial do Enem
+                onPress={() => window.open('https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem', 'Vestibular')}>
+                <Text style={estilo.linkEnem}>Site oficial do Enem</Text>
               </Pressable>
             </View>
             <View>
