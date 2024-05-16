@@ -1,5 +1,4 @@
-
-import { View, Text, TouchableOpacity, Modal, Button, ScrollView } from 'react-native'; // Importe o Button de 'react-native'
+import{ View, Text, TouchableOpacity, Modal, Button, ScrollView } from 'react-native'; // Importe o Button de 'react-native'
 import { enemstyle } from './style';
 import Cabecalho from '../../components/header';
 import { useState } from 'react';
