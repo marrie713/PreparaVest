@@ -4,7 +4,7 @@ export const estilo = StyleSheet.create({
 
     root:{
         flexDirection: 'row',
-        justifyContent: 'center',
+        
     }, 
 
     textStyle: {

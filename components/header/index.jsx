@@ -16,15 +16,7 @@ export default function Cabecalho(){
             <View style={style.cabecalho}>   
                 <Image style={style.ImagemLogo}
                 source={require('../../assets/LogoPreparaVest.png')} />
-            <View style={{flexDirection: 'row', gap: 4}}>
-                <TextInput style={style.pesquisa}
-                />
-                <Icon style={{height: 20, width: 20}}
-                    name='search'
-                    type='material'
-                    color='#000'
-                />
-            </View>
+           
             <View style={style.subtitulo}>
                 <Text style={{fontSize: 22}} onPress={()=> navigation.navigate("Home")}>Home</Text>
                 <Text style={{fontSize: 22}} onPress={()=> navigation.navigate("Pagina Enem")}>Enem</Text>

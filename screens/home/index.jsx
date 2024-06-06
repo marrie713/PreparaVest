@@ -9,9 +9,10 @@ export default function HomeScreen(){
     const navigation = useNavigation();
     
     return(
+        <ScrollView>
         <View style={paginapv.root}>
                 <Cabecalho/>
-                <ScrollView>
+                
                     <View style={paginapv.container}>
                         <View  style={paginapv.sombrab}><Image source={require('../../assets/BannerPrincipal.jpeg')} style={paginapv.Banner} />
                         </View>
@@ -27,7 +28,8 @@ export default function HomeScreen(){
                         </TouchableOpacity>
                     </View>
                 <FooterComponent />
-            </ScrollView>
+            
         </View>
+        </ScrollView>
     );
 }

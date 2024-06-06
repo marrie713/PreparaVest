@@ -6,11 +6,12 @@ import Cabecalho from '../../components/header';
 import { useState } from 'react';
 import { estilobotoes } from '../../components/Botoes/style';
 import { Botoes } from '../../components/Botoes';
+import FooterComponent from '../../components/footer';
 
 // Importe a fonte
 import KollektifBold from '../../assets/fonts/Kollektif-Bold.ttf';
 import Kollektif from '../../assets/fonts/Kollektif.ttf';
-import FooterComponent from '../../components/footer';
+
 
 
 
@@ -32,11 +33,11 @@ export default function Informacoes() {
   }, []);
 
   return ( 
-
+    <ScrollView>
     <View>
         <Cabecalho/>
     
-    <ScrollView>
+    
     <View style={estilo.root}>
         <Botoes/>  
       <View style={estilobotoes.espacopv}>
@@ -84,7 +85,8 @@ export default function Informacoes() {
       </View>
 
       <FooterComponent/>
-      </ScrollView>
+      
     </View>
+    </ScrollView>
   );
 }

@@ -6,36 +6,34 @@ export const estilo = StyleSheet.create({
     textStyle: {
         color: 'black',
         fontFamily: 'KollektifBold',
-        textAlign: 'center',
         fontSize:25,
         marginBottom:30,
         marginTop: 30
       },
 
-    espacopv:{
-        flexDirection:'column',
-        margin:15,
-        alignItems: 'center',
-        justifyContent: 'center',
-        justifyContent:'space-around',
-        
-    },
     espacopv1:{
-        alignItems: 'flex-start',
-        justifyContent:'center',
-        justifyContent:'space-around',
+        
         width:1000,
-        height:480,
+        height:180,
         flexDirection:'row',
        
     },
-
-    //style desta pagina//
 
     titulos:{
         fontFamily: 'KollektifBold',
         fontSize: 20,
         margin:5
+    },
+
+    tituloProf: {
+        fontFamily: 'kollektifBold',
+        fontSize: 25,
+    },
+
+    viewtitulo: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: 100
     },
 
     textos:{
@@ -47,15 +45,19 @@ export const estilo = StyleSheet.create({
     },
     
     espacotaxtos:{
-        width:'47%',
-       
+        //width:'47%',
+        flexDirection: 'row',
+        justifyContent: 'center', 
+        alignItems: 'center'
     },
     categoria:{
-        margin:6
+        //margin:6,
     },
 
     conteudo: {
         flexDirection: 'column',
+        alignItems: 'center'
+
         
     },
 
@@ -72,16 +74,20 @@ export const estilo = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 15,
         padding: 20,
-        borderRadius: 25
+        borderRadius: 25,
+        width: 600
+        
 
         
     },
 
     container: {
-        gap: 50,
+        gap: 100,
         marginLeft: 50,
-        marginBottom: 20, 
-        
+        marginBottom: 20,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
 
     },
 
@@ -90,7 +96,7 @@ export const estilo = StyleSheet.create({
     },
 
     biografia: {
-        width: 550,
+        width: 300,
         marginLeft: 50,
         fontFamily: 'Kollektif'
 
@@ -101,5 +107,10 @@ export const estilo = StyleSheet.create({
         fontFamily: 'KollektifBold',
         marginTop: 30,
         marginLeft: 50
+    },
+
+    bloco: {
+        flexDirection: 'column',
+        gap: 70
     }
 })

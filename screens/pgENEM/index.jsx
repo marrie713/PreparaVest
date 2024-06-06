@@ -2,6 +2,7 @@ import{ View, Text, TouchableOpacity, Modal, Button, ScrollView } from 'react-na
 import { enemstyle } from './style';
 import Cabecalho from '../../components/header';
 import { useState } from 'react';
+import FooterComponent from '../../components/footer';
 
 
 export default function PaginaEnem() {
@@ -286,6 +287,7 @@ export default function PaginaEnem() {
 
             </View>
             </View>
+            <FooterComponent/>
             </ScrollView>
         </View>
        
