@@ -8,7 +8,7 @@ export const estilo = StyleSheet.create({
         fontFamily: 'KollektifBold',
         fontSize:25,
         marginBottom:30,
-        marginTop: 30
+        marginTop: 30,
       },
 
     espacopv1:{
@@ -37,11 +37,11 @@ export const estilo = StyleSheet.create({
     },
 
     textos:{
-
-       fontFamily: 'Kollektif',
+        width: 450,
+        fontFamily: 'Kollektif',
         fontSize: 20,
         marginLeft:30,
-        marginTop:2
+
     },
     
     espacotaxtos:{
@@ -56,8 +56,8 @@ export const estilo = StyleSheet.create({
 
     conteudo: {
         flexDirection: 'column',
-        alignItems: 'center'
-
+        alignItems: 'center',
+        justifyContent: 'center',
         
     },
 

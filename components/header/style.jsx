@@ -5,7 +5,7 @@ export  const style = StyleSheet.create({
     cabecalho:{
         width: '100%',
         flexDirection:'row',
-        justifyContent:'space-around',
+        justifyContent: 'space-around',
         alignItems:'center',
         backgroundColor:'#38B6FF'
     },
@@ -18,7 +18,7 @@ export  const style = StyleSheet.create({
     subtitulo: {
         fontSize: 20,
         flexDirection: 'row',
-        gap: 25
+        gap: 25,
     },
     pesquisa: {
         backgroundColor: '#fff',

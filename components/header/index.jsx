@@ -1,16 +1,31 @@
-import { Text,View,TextInput,Image } from "react-native";
+import { Text,View,Image } from "react-native";
 import { style } from "./style";
 import { Icon } from "react-native-elements";
-//import * as React from 'react';
-
-//esse era o problema, a importaçao tem que ser essa
 import { useNavigation } from '@react-navigation/native';
-import HomeScreen from "../../screens/home";
+
+//fonte
+import * as Font from 'expo-font';
+import { useEffect } from 'react';
+import KollektifBold from '../../assets/fonts/Kollektif-Bold.ttf';
+import Kollektif from '../../assets/fonts/Kollektif.ttf';
 
 
 export default function Cabecalho(){
     //chame esse cara em todos os componentes que desejar fazer troca de tela
     const navigation = useNavigation();
+
+    useEffect(() => {
+        async function loadFonts() {
+          await Font.loadAsync({
+            KollektifBold: KollektifBold,
+            Kollektif: Kollektif,
+          });
+          setFontsLoaded(true);
+        }
+    
+        loadFonts();
+      }, []);
+    
 
     return(
             <View style={style.cabecalho}>   
@@ -18,9 +33,9 @@ export default function Cabecalho(){
                 source={require('../../assets/LogoPreparaVest.png')} />
            
             <View style={style.subtitulo}>
-                <Text style={{fontSize: 22}} onPress={()=> navigation.navigate("Home")}>Home</Text>
-                <Text style={{fontSize: 22}} onPress={()=> navigation.navigate("Pagina Enem")}>Enem</Text>
-                <Text style={{fontSize: 22}} >Sobre nós</Text>
+                <Text style={{fontSize: 22, fontFamily: 'Kollektif'}} onPress={()=> navigation.navigate("Home")}>Home</Text>
+                <Text style={{fontSize: 22, fontFamily: 'Kollektif'}} onPress={()=> navigation.navigate("Pagina Enem")}>Enem</Text>
+                <Text style={{fontSize: 22, fontFamily: 'Kollektif'}} >Sobre nós</Text>
             </View>
             <Icon
                 name='person'

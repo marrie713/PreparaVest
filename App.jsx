@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return(
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Conteúdo relevante" screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName="Pagina Enem" screenOptions={{headerShown: false}}>
         <Stack.Screen name="Conteúdo relevante" component={Conteudorel}/>
         <Stack.Screen name="Questoes" component={Questoes} />
         <Stack.Screen name="Home" component={HomeScreen} />

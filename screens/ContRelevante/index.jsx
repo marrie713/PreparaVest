@@ -36,7 +36,7 @@ export default function Conteudorel() {
       <View style={{flexDirection: 'collumn', justifyContent: 'center'}}>
         <View style={{flexDirection: 'row'}}>
           <Botoes />
-          <View style={estilo.conteudo}>
+          <View style={estilo.conteudo}>    
             <Text style={estilo.textStyle}>Conteúdo Relevante</Text>
             <View style={estilo.espacopv1}>
               <View style={estilo.espacotaxtos}>

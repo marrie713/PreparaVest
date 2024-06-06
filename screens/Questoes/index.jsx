@@ -18,9 +18,8 @@ export function Questoes(){
                 
 
                 <View style={estiloquestoes.questoes}>
-                    <Pressable>{'<'}</Pressable>
                     <Text style={estiloquestoes.titulo}>Questões</Text>
-                    <Pressable>{'>'}</Pressable>
+                    
                     <View>
                         <Text style={{width: 800}}>Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar a previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020-2021, ele obteve os seguintes dados:</Text>
                     </View>
