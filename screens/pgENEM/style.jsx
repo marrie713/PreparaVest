@@ -11,7 +11,7 @@ export const enemstyle = StyleSheet.create({
     espacobt:{
         alignItems:'center',
         justifyContent: 'center',
-        marginBottom:'20%'
+        marginBottom: '8%'
  
     },
     butao:{
@@ -29,17 +29,19 @@ export const enemstyle = StyleSheet.create({
      
       fontSize:30,
       fontFamily: 'KollektifBold',
-
-     marginBottom:60
+      marginBottom:60,
+      
     },
 
     textinho:{
       fontSize:19,
       fontFamily: 'Kollektif',
+      
     },
 
     //modal//
     centeredView: {
+        
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -54,7 +56,6 @@ export const enemstyle = StyleSheet.create({
         padding: 20,
         height:'100%',
         width:'100%',
-        alignItems: 'center',
         shadowColor: '#000',
         shadowOffset: {
           width: 0,
@@ -72,7 +73,8 @@ export const enemstyle = StyleSheet.create({
         padding: 10,
         elevation: 2,
         marginTop:20,
-        backgroundColor: '#2196F3'
+        backgroundColor: '#2196F3',
+        
       },
    
       buttonClose: {
@@ -85,6 +87,7 @@ export const enemstyle = StyleSheet.create({
         fontSize:25,
         marginBottom:30,
         fontFamily: 'KollektifBold',
+        
       },
 
       textStyle1: {
@@ -97,9 +100,9 @@ export const enemstyle = StyleSheet.create({
         marginBottom: 15,
        justifyContent:'center',
        alignItems:'center',
-       justifyContent:'space-around',
        flexDirection:'row',
-       width:'50%'
+       width:'50%',
+       gap: 10
       
       },
 
@@ -109,6 +112,7 @@ export const enemstyle = StyleSheet.create({
         margin:15,
         alignItems: 'center',
         justifyContent: 'center',
+        
     },
     espacopv1:{
       
@@ -120,7 +124,7 @@ export const enemstyle = StyleSheet.create({
         backgroundColor:'#38B6FF',
         borderRadius:15,
         flexWrap:'wrap',
-        marginBottom: 140
+        marginBottom: 10
 
 
 

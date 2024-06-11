@@ -23,6 +23,9 @@ export function Botoes(){
           <Pressable style={estilobotoes.butao} onPress={()=> navigation.navigate("Questoes")}>
             <Text style={estilobotoes.textinho} >Questões</Text>
           </Pressable>
+          <Pressable style={estilobotoes.butao} onPress={()=> navigation.navigate("Prepare-se")}>
+            <Text style={estilobotoes.textinho} >Prepare-se</Text>
+          </Pressable>
         </View>
         </View>
     )
