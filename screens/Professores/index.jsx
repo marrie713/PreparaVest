@@ -10,6 +10,7 @@ import BasicExample from "../../components/accordion";
 
 export function Professores(){
     return(
+      
         <ScrollView>
         <View style={Prof.root}>
             <Cabecalho/>
@@ -26,7 +27,10 @@ export function Professores(){
 
             <View style={Prof.bloco}>
             <Text style={Prof.Materias}>Matemática</Text>
-            <View style={Prof.professores}> 
+
+            <View style={Prof.espacomat}>
+
+               <View style={Prof.professores}> 
               <Image
               style={Prof.Perfil}
               source={require('../../assets/Professores/FerrettoProfile.jpg')}
@@ -67,8 +71,23 @@ export function Professores(){
                 </Pressable>
               </View>
             </View>
-      
-             <Text style={Prof.Materias}>Física</Text>
+            </View>
+            <Text style={Prof.Materias}>Física</Text>
+            <View style={Prof.espacomat}>
+
+            <View style={Prof.professores}>
+              <Image
+              style={Prof.Perfil}
+              source={require('../../assets/Professores/PedroProfile.jpg')}
+              />
+              <View>
+                <Text style={Prof.textosMaterias}> Ciência Todo Dia</Text>
+                <Pressable onPress={() => window.open('https://www.youtube.com/@CienciaTodoDia', 'Vestibular')}>
+                  <Text style={Prof.textosMaterias}>Canal Youtube</Text>
+                  <Text style={Prof.biografia}>Um canal totalmente voltado para assuntos que podem ser abordados no cotidiano, mantendo seu cérebro sempre ativo!</Text>
+                </Pressable>
+              </View>
+            </View>
 
             <View style={Prof.professores}>
               <Image
@@ -97,10 +116,14 @@ export function Professores(){
                 </Pressable>
               </View>
             </View>
+            </View>
+            
+
+          
 
             <Text style={Prof.Materias}>Química</Text>
-
-            <View style={Prof.professores}>
+           <View style={Prof.espacomat}>
+             <View style={Prof.professores}>
               <Image
               style={Prof.Perfil}
               source={require('../../assets/Professores/MichelProfile.jpg')}
@@ -128,29 +151,41 @@ export function Professores(){
               </View>
             </View>
 
-            <Text style={Prof.Materias}>Literatura</Text>
-
             <View style={Prof.professores}>
               <Image
               style={Prof.Perfil}
-              source={require('../../assets/Professores/AlencarProfile.jpg')}
+              source={require('../../assets/Professores/MarcelaoProfile.jpg')}
               />
               <View>
-                <Text style={Prof.textosMaterias}>Literatura com Alencar</Text>
-                <Pressable onPress={() => window.open('https://www.youtube.com/@LiteraturacomAlencar', 'Vestibular')}>
+                <Text style={Prof.textosMaterias}> Marcelão da Química</Text>
+                <Pressable onPress={() => window.open('https://www.youtube.com/c/Marcel%C3%A3odaQu%C3%ADmica', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>Olá, meu nome é Alencar Schueroff. Com minhas videoaulas de Literatura, ajudo você em provas, mostrando e ensinando o que mais cai em Literatura no Enem, em vestibulares e concursos.</Text>
+                  <Text style={Prof.biografia}>O professor Marcelo Bria, mais conhecido como "Marcelão da Química", é Licenciado em Química (Univ. Uberaba-MG).  Esse canal apresenta aulas, resoluções de provas, documentários e vlogs. Tudo no universo da Química.</Text>
+                </Pressable>
+              </View>
+            </View>
+           </View>
+           
+
+            <Text style={Prof.Materias}>Biologia</Text>
+          <View style={Prof.espacomat}>
+
+          <View style={Prof.professores}>
+              <Image
+              style={Prof.Perfil}
+              source={require('../../assets/Professores/LandimProfile.jpg')}
+              />
+              <View>
+                <Text style={Prof.textosMaterias}>Bio com Landim</Text>
+                <Pressable onPress={() => window.open('https://www.youtube.com/@BiocomLandim', 'Vestibular')}>
+                  <Text style={Prof.textosMaterias}>Canal Youtube</Text>
+                  <Text style={Prof.biografia}>Vídeos semanais sobre biologia com o prof Landim</Text>
                 </Pressable>
               </View>
             </View>
 
-            </View>
 
-            <View style={Prof.bloco}>
-
-            <Text style={Prof.Materias}>Biologia</Text>
-
-            <View style={Prof.professores}>
+             <View style={Prof.professores}>
               <Image
               style={Prof.Perfil}
               source={require('../../assets/Professores/SamuelProfile.jpg')}
@@ -163,9 +198,6 @@ export function Professores(){
                 </Pressable>
               </View>
             </View>
-           
-
-          
 
             <View style={Prof.professores}>
               <Image
@@ -180,10 +212,12 @@ export function Professores(){
                 </Pressable>
               </View>
             </View>
+          </View>
+           
 
             <Text style={Prof.Materias}>Português</Text>
-
-            <View style={Prof.professores}>
+            <View style={Prof.espacomat}>
+              <View style={Prof.professores}>
               <Image
               style={Prof.Perfil}
               source={require('../../assets/Professores/NoslenProfile.jpg')}
@@ -200,20 +234,36 @@ export function Professores(){
             <View style={Prof.professores}>
               <Image
               style={Prof.Perfil}
-              source={require('../../assets/Professores/LeticiaProfile.jpg')}
+              source={require('../../assets/Professores/AlencarProfile.jpg')}
               />
               <View>
-                <Text style={Prof.textosMaterias}>Português com Letícia</Text>
-                <Pressable onPress={() => window.open('https://www.youtube.com/c/Portugu%C3%AAscomLet%C3%ADcia', 'Vestibular')}>
+                <Text style={Prof.textosMaterias}>Literatura com Alencar</Text>
+                <Pressable onPress={() => window.open('https://www.youtube.com/@LiteraturacomAlencar', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>🚀 PORTUGUÊS COMPLETO | Sua aprovação está aqui! Curso completo, do básico ao avançado, com videoaulas exclusivas. Mais de 150 aulas aprofundadas e objetivas com foco em concursos públicos.</Text>
+                  <Text style={Prof.biografia}>Olá, meu nome é Alencar Schueroff. Com minhas videoaulas de Literatura, ajudo você em provas, mostrando e ensinando o que mais cai em Literatura no Enem, em vestibulares e concursos.</Text>
                 </Pressable>
               </View>
             </View>
 
-            <Text style={Prof.Materias}>Geografia</Text>
-
             <View style={Prof.professores}>
+              <Image
+              style={Prof.Perfil}
+              source={require('../../assets/Professores/FernandaProfile.jpg')}
+              />
+              <View>
+                <Text style={Prof.textosMaterias}>FPTV | Fernanda Pessoa TV</Text>
+                <Pressable onPress={() => window.open('https://www.youtube.com/@FernandaPessoaTV', 'Vestibular')}>
+                  <Text style={Prof.textosMaterias}>Canal Youtube</Text>
+                  <Text style={Prof.biografia}>O Fernanda Pessoa TV, ou FPTV, é o canal oficial do Fernanda Pessoa Grupo Educacional. Fernanda Pessoa é a professora do maior curso presencial de português e redação para ENEM e vestibulares do país. </Text>
+                </Pressable>
+              </View>
+            </View>
+
+            </View>
+            
+            <Text style={Prof.Materias}>Geografia</Text>
+          <View style={Prof.espacomat}>
+               <View style={Prof.professores}>
               <Image
               style={Prof.Perfil}
               source={require('../../assets/Professores/RicardoProfile.jpg')}
@@ -227,18 +277,62 @@ export function Professores(){
               </View>
             </View>
 
-            <Text style={Prof.Materias}>História, Sociologia e Filosofia</Text>
+            <View style={Prof.professores}>
+              <Image
+              style={Prof.Perfil}
+              source={require('../../assets/Professores/ThaisProfile.jpg')}
+              />
+              <View>
+                <Text style={Prof.textosMaterias}> Professora Thais Formagio</Text>
+                <Pressable onPress={() => window.open('https://www.youtube.com/@profthaisformagio', 'Vestibular')}>
+                  <Text style={Prof.textosMaterias}>Canal Youtube</Text>
+                  <Text style={Prof.biografia}>Se te disseram que Geografia é chata, difícil, que não é para você, é mentira. Aqui, eu ensino Geografia para transformar tudo. Transforma sonhos em realidade, cria novos futuros, e dá a chance de talentos adormecidos viverem aquilo que nasceram para fazer.</Text>
+                </Pressable>
+              </View>
+            </View>
 
             <View style={Prof.professores}>
               <Image
               style={Prof.Perfil}
-              source={require('../../assets/Professores/ParabolicaProfile.jpg')}
+              source={require('../../assets/Professores/JeanProfile.jpg')}
               />
               <View>
+                <Text style={Prof.textosMaterias}>Prof. JeanGrafia | GabaritaGeo | </Text>
+                <Pressable onPress={() => window.open('https://www.youtube.com/@gabaritageo', 'Vestibular')}>
+                  <Text style={Prof.textosMaterias}>Canal Youtube</Text>
+                  <Text style={Prof.biografia}>O Prof. JeanGrafia é formado em Geografia pela UNESP em São Paulo, tem ampla experiência em Geografia e Geopolítica e é a maior autoridade em Vestibulares de São Paulo da Internet.</Text>
+                </Pressable>
+              </View>
+            </View>
+          </View>
+           
+
+            <Text style={Prof.Materias}>História, Sociologia e Filosofia</Text>
+          <View style={Prof.espacomat}>
+              <View style={Prof.professores}>
+              <Image
+              style={Prof.Perfil}
+              source={require('../../assets/Professores/ParabolicaProfile.jpg')}
+              />
+              <View  style={Prof.textop}>
                 <Text style={Prof.textosMaterias}>Parabólica</Text>
                 <Pressable onPress={() => window.open('https://www.youtube.com/c/Parab%C3%B3lica', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
                   <Text style={Prof.biografia}>Olá, eu sou Pedro Rennó, sou Professor de História e Filosofia de cursinho. Neste canal, Parabólica, terei sempre o maior prazer em lhes ajudar a conquistar os seus objetivos. Espero que gostem e sejam muito bem vindos!</Text>
+                </Pressable>
+              </View>
+            </View>
+
+            <View style={Prof.professores}>
+              <Image
+              style={Prof.Perfil}
+              source={require('../../assets/Professores/DeboraProfile.jpg')}
+              />
+              <View>
+                <Text style={Prof.textosMaterias}> Débora Aladim </Text>
+                <Pressable onPress={() => window.open('https://www.youtube.com/@deboraaladim', 'Vestibular')}>
+                  <Text style={Prof.textosMaterias}>Canal Youtube</Text>
+                  <Text style={Prof.biografia}>Débora Aladim é mineira, formada em História pela UFMG e desde 2013 faz vídeo-aulas que ajudaram milhões de pessoas a estudar e a passar no vestibular. Aqui você vai encontrar vídeo-aulas de História, um método único para fazer redações modelo ENEM e dicas de estudo! </Text>
                 </Pressable>
               </View>
             </View>
@@ -257,28 +351,16 @@ export function Professores(){
               </View>
             </View>
 
-            
-            <Text style={Prof.Materias}>Inglês</Text>
-
-            <View style={Prof.professores}>
-              <Image
-              style={Prof.Perfil}
-              source={require('../../assets/Professores/KennyProfile.jpg')}
-              />
-              <View>
-                <Text style={Prof.textosMaterias}>PROFESSOR KENNY</Text>
-                <Pressable onPress={() => window.open('https://www.youtube.com/@PROFESSORKENNYOFICIAL', 'Vestibular')}>
-                  <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>O Professor Kenny é nativo do Canadá e reside no Brasil. Aqui, ele acumulou vasta experiência como professor de inglês, desenvolvendo uma metodologia singular e revolucionária que garante o aprendizado definitivo da língua.</Text>
-                </Pressable>
-              </View>
-            </View>
-            </View>
           </View>
+          
+          
+          
+            </View>
+            </View>
           </View>
           </View>
         </View>
-
+         
         <FooterComponent/>
         </ScrollView>
     )

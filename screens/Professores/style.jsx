@@ -21,24 +21,26 @@ export const Prof = StyleSheet.create({
     },
 
     professores: {
-        flexDirection: 'row',
+        flexDirection:'column',
         shadowColor: '#171717',
         shadowOffset: {width: -4, height: 8},
         shadowOpacity: 0.3,
         shadowRadius: 15,
         padding: 20,
         borderRadius: 25,
-        width: 480
+        justifyContent:'center',
+        alignItems:'center',
+        justifyContent:'space-around',
+        margin:5
+        
         
 
         
     },
 
     container: {
-        gap: 100,
         marginBottom: 50,
         flexDirection: 'row',
-
     },
 
     Perfil: {
@@ -47,8 +49,9 @@ export const Prof = StyleSheet.create({
 
     biografia: {
         width: 200,
-        marginLeft: 50,
-        fontFamily: 'Kollektif'
+        marginLeft: 27,
+        fontFamily: 'Kollektif',
+        textAlign:'center',
 
     },
 
@@ -61,7 +64,15 @@ export const Prof = StyleSheet.create({
     },
 
     bloco: {
-        flexDirection: 'column',
-        gap: 70,
+        gap: 50,
+    },
+    espacomat:{
+        flexDirection:'row',
+        justifyContent:'space-around',
+        gap: 25,
+        width:'100%'
+    },
+    textop:{
+        justifyContent:'flex-start'
     }
 })
