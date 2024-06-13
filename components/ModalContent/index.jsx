@@ -140,7 +140,7 @@ export const ModalContent6 = () => {
                         <Text style={enemstyle.textStyle1} >2º Dia – Caderno 7 – Azul – Aplicação Regular</Text>
                          <View style={enemstyle.modalText} >
                               <Pressable onPress={() => window.open(' https://download.inep.gov.br/educacao_basica/enem/provas/2017/2017_PV_impresso_D2_CD7.pdf', "Vestibular") }  style={[enemstyle.button, enemstyle.textStyle1]}> Prova</Pressable>
-                             <Pressable onPress={() => window.open('  https://download.inep.gov.br/educacao_basica/enem/gabaritos/2017/cad_8_gabarito_rosa_12112017.pdf', "Gabarito")} style={[enemstyle.button, enemstyle.textStyle1]}>Gabarito </Pressable>
+                             <Pressable onPress={() => window.open('  https://download.inep.gov.br/educacao_basica/enem/gabaritos/2017/cad_7_gabarito_azul_12112017.pdf', "Gabarito")} style={[enemstyle.button, enemstyle.textStyle1]}>Gabarito </Pressable>
                          </View>
                       
                        

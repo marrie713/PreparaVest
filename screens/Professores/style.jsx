@@ -2,10 +2,6 @@ import { StyleSheet } from "react-native";
 
 
 export const Prof = StyleSheet.create({
-    root: {
-        width: '100%'
-    }, 
-
     tituloProf: {
         fontFamily: 'kollektifBold',
         fontSize: 25,
@@ -32,7 +28,7 @@ export const Prof = StyleSheet.create({
         shadowRadius: 15,
         padding: 20,
         borderRadius: 25,
-        width: 600
+        width: 480
         
 
         
@@ -40,11 +36,8 @@ export const Prof = StyleSheet.create({
 
     container: {
         gap: 100,
-        marginLeft: 50,
-        marginBottom: 20,
+        marginBottom: 50,
         flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center'
 
     },
 
@@ -53,7 +46,7 @@ export const Prof = StyleSheet.create({
     },
 
     biografia: {
-        width: 300,
+        width: 200,
         marginLeft: 50,
         fontFamily: 'Kollektif'
 
@@ -63,11 +56,12 @@ export const Prof = StyleSheet.create({
         fontSize: 20,
         fontFamily: 'KollektifBold',
         marginTop: 30,
-        marginLeft: 50
+        marginLeft: 50,
+        width: 200
     },
 
     bloco: {
         flexDirection: 'column',
-        gap: 70
+        gap: 70,
     }
 })

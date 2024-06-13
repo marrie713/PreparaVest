@@ -72,7 +72,7 @@ export  const style = StyleSheet.create({
     
     imagemavatar:{
         borderRadius:7,
-        height:'25%',
+        height:'30%',
         width:'20%'
     },
 

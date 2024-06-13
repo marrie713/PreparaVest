@@ -1,5 +1,6 @@
-import { View, TextInput, TouchableOpacity, Text, Image } from "react-native";
+import { View, TextInput, TouchableOpacity, Text, Image, Pressable } from "react-native";
 import { styles } from "./style";
+import { color } from "react-native-elements/dist/helpers";
 
 
 export default function Login() {
@@ -11,13 +12,17 @@ export default function Login() {
         <View style={styles.header}>
           <Text style={styles.texto}>Login</Text>
   
-          <TextInput style={styles.TextInput} placeholder="Nome"/>
           <TextInput style={styles.TextInput} placeholder="Email"/>
           <TextInput style={styles.TextInput} placeholder="Senha"/>
-  
-          <TouchableOpacity style={styles.botao}>
+
+
+          <Pressable style={styles.cadastrar}>
+            <Text style={{ fontSize: 22, color: '#45455F'}}>Cadastre-se</Text>
+          </Pressable>
+
+          <Pressable style={styles.botao}>
             <Text style={{color: '#fff', fontSize: 22}}>Entrar</Text>
-          </TouchableOpacity>
+          </Pressable>
         </View>
       </View>
     );

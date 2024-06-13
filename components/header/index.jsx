@@ -59,7 +59,7 @@ export default function Cabecalho(){
                 <View style={style.modal}>
                   <Text style={style.titulomodal}>Perfil</Text>
 
-                  <Image source={require('../../assets/avatares/1.png')} style={style.imagemavatar}/>
+                  <Image source={require('../../assets/avatares/perfil-de-usuario.png')} style={style.imagemavatar}/>
                   <Text style={style.textomodal}>Nome </Text>
                   <Text style={style.textomodal}>Email usuario</Text>
                   <Pressable onPress={() => setModalVisible1(true)} style={style.botal }>Alterar foto</Pressable>

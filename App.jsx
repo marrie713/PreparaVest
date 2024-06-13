@@ -8,6 +8,8 @@ import Informacoes from "./screens/InfoGerais/index.jsx";
 import Conteudorel from "./screens/ContRelevante/index.jsx";
 import { Questoes } from "./screens/Questoes/index.jsx";
 import { Professores } from "./screens/Professores/index.jsx";
+import Login from "./screens/Login/index.jsx";
+import Cadastro from "./screens/Cadastro/index.jsx";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +23,8 @@ export default function App() {
         <Stack.Screen name="Informações" component={Informacoes} />
         <Stack.Screen name="Pagina Enem" component={PaginaEnem} />
         <Stack.Screen name="Prepare-se" component={Professores} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Cadastro" component={Cadastro} />
       </Stack.Navigator>
     </NavigationContainer>
 )}

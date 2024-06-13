@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
       height:450,
       width:350,
       backgroundColor: "#FCFCFC",
-      borderRadius: 10,
+      borderRadius: 20,
       justifyContent: "center",
       alignItems: 'center',
       fontFamily: 'Kollektif'
@@ -21,9 +21,9 @@ export const styles = StyleSheet.create({
     TextInput: {
       backgroundColor: "#d9d9d9",
       height: 50,
-      width: 300,
+      width: 280,
       margin: 14,
-      borderRadius: 10,
+      borderRadius: 25,
       padding:20,
       color: '#797976',
       fontSize: 18
@@ -32,16 +32,22 @@ export const styles = StyleSheet.create({
       height: 50,
       width: 100,
       backgroundColor: '#4776DF',
-      borderRadius: 10,
+      borderRadius: 30,
       alignItems: 'center',
       justifyContent: 'center',
       marginTop: 30
 
     },
+    cadastrar:{
+      textDecorationLine: "underline",
+      color: '#A2A3BB'
+    },
+
   texto: {
     color: "#000",
     fontSize: 40,   
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: 30
   },
 
   Logo: {

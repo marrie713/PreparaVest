@@ -4,6 +4,7 @@ import Cabecalho from "../../components/header";
 import { ScrollView } from "react-native-gesture-handler";
 import FooterComponent from "../../components/footer";
 import { Botoes } from "../../components/Botoes";
+import BasicExample from "../../components/accordion";
 
 
 
@@ -48,7 +49,7 @@ export function Professores(){
                 <Text style={Prof.textosMaterias}>Dicasdemat Sandro Curió</Text>
                 <Pressable onPress={() => window.open('https://www.youtube.com/@sandrocuriodicasdemat/featured', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>O canal DicasdeMat Sandro Curió tem como objetivo ajudar estudantes, em todos os níveis da matemática, de forma clara e objetiva. Através de uma didática descontraída, você absorve todo conteúdo. Vamos juntos, RUMO AO TOPO!</Text>
+                  <Text style={Prof.biografia}>O canal DicasdeMat Sandro Curió tem como objetivo ajudar estudantes, em todos os níveis da matemática. Através de uma didática descontraída. Vamos juntos, RUMO AO TOPO!</Text>
                 </Pressable>
               </View>
             </View>
@@ -62,7 +63,7 @@ export function Professores(){
                 <Text style={Prof.textosMaterias}>Gis com Giz Mathematics</Text>
                 <Pressable onPress={() => window.open('https://www.youtube.com/@Giscomgiz/featured', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>Hi!! I am Gis Mathematics teacher and Master in Mathematics Education. I created the channel with the aim of showing that it is easy to learn mathematics and, therefore, I try to give clear and objective explanations. I hope my channel helps improve the mathematical knowledge of my students, alumni, future students and everyone who wants to learn mathematics. Good studies.</Text>
+                  <Text style={Prof.biografia}>Oi!! Sou professor de Matemática e Mestre em Educação Matemática. Criei o canal com o objetivo de mostrar que é fácil aprender matemática e, por isso, procuro dar explicações claras e objetivas. Bons estudos.</Text>
                 </Pressable>
               </View>
             </View>
@@ -78,7 +79,7 @@ export function Professores(){
                 <Text style={Prof.textosMaterias}>Professor Coelho</Text>
                 <Pressable onPress={() => window.open('https://www.youtube.com/@profcoelho', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>O canal de Física do Professor Coelho sintetiza o que milhares de estudantes desejam: é a OPORTUNIDADE única para adquirir um elevado CONHECIMENTO em física, desde o nível básico até o avançado. Venha estudar conosco e torne-se um apaixonado por essa disciplina!</Text>
+                  <Text style={Prof.biografia}>O canal de Física do Professor Coelho sintetiza o que milhares de estudantes desejam: é a OPORTUNIDADE única para adquirir um elevado CONHECIMENTO em física, desde o nível básico até o avançado. Venha estudar conosco!</Text>
                 </Pressable>
               </View>
             </View>
@@ -92,7 +93,7 @@ export function Professores(){
                 <Text style={Prof.textosMaterias}>Professor Boaro</Text>
                 <Pressable onPress={() => window.open('https://www.youtube.com/@professorboaro/featured', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>Fala Galera! Neste Canal postarei vídeos com dicas para os vestibulares, resolução das provas mais recentes, além das aulas divididas em pequenos módulos para facilitar seu aprendizado. Postarei também aqui vídeos sobre assuntos importantes que envolve ciências e que está rolando no mundo, além de experimentos para aproximar seu estudo do seu cotidiano. Aproveite!</Text>
+                  <Text style={Prof.biografia}>Fala Galera! Neste Canal postarei vídeos com dicas para os vestibulares, resolução das provas mais recentes, além das aulas divididas em pequenos módulos para facilitar seu aprendizado. Aproveite!</Text>
                 </Pressable>
               </View>
             </View>
@@ -108,7 +109,7 @@ export function Professores(){
                 <Text style={Prof.textosMaterias}>Café com química - Prof Michel</Text>
                 <Pressable onPress={() => window.open('https://www.youtube.com/@profmichel', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>O canal café com química surgiu para oferecer uma solução criativa no estudo de química!!!!!! Através de aulas curtas, experiências e exercícios temos o enorme prazer de contribuir para a democratização do ensino no Brasil.</Text>
+                  <Text style={Prof.biografia}>O canal café com química surgiu para oferecer uma solução criativa no estudo de química!!! Através de aulas curtas, experiências e exercícios temos o enorme prazer de contribuir para a democratização do ensino no Brasil.</Text>
                 </Pressable>
               </View>
             </View>
@@ -127,6 +128,26 @@ export function Professores(){
               </View>
             </View>
 
+            <Text style={Prof.Materias}>Literatura</Text>
+
+            <View style={Prof.professores}>
+              <Image
+              style={Prof.Perfil}
+              source={require('../../assets/Professores/AlencarProfile.jpg')}
+              />
+              <View>
+                <Text style={Prof.textosMaterias}>Literatura com Alencar</Text>
+                <Pressable onPress={() => window.open('https://www.youtube.com/@LiteraturacomAlencar', 'Vestibular')}>
+                  <Text style={Prof.textosMaterias}>Canal Youtube</Text>
+                  <Text style={Prof.biografia}>Olá, meu nome é Alencar Schueroff. Com minhas videoaulas de Literatura, ajudo você em provas, mostrando e ensinando o que mais cai em Literatura no Enem, em vestibulares e concursos.</Text>
+                </Pressable>
+              </View>
+            </View>
+
+            </View>
+
+            <View style={Prof.bloco}>
+
             <Text style={Prof.Materias}>Biologia</Text>
 
             <View style={Prof.professores}>
@@ -138,13 +159,13 @@ export function Professores(){
                 <Text style={Prof.textosMaterias}>Biologia com Samuel Cunha</Text>
                 <Pressable onPress={() => window.open('https://www.youtube.com/@professorsamuelcunha', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>Bem-vindos ao Biologia com Samuel Cunha, um canal dedicado à educação! O prof. Samuel é biólogo licenciado, mestre em parasitologia, formado há mais de dez anos pela Universidade Federal de Pelotas. Durante sua graduação, começou a lecionar de forma beneficente no cursinho presencial Pré Vestibular Desafio, mantido pela UFPel, e desde então se apaixonou pela profissão! No final de 2015, iniciou este canal e colocou em prática o sonho de expandir o seu trabalho e ajudar a melhorar a educação desse brasilzão afora! </Text>
+                  <Text style={Prof.biografia}>Bem-vindos ao Biologia com Samuel Cunha, um canal dedicado à educação! Iniciou este canal e colocou em prática o sonho de ajudar a melhorar a educação desse brasilzão afora! </Text>
                 </Pressable>
               </View>
             </View>
-            </View>
+           
 
-          <View style={Prof.bloco}>
+          
 
             <View style={Prof.professores}>
               <Image
@@ -185,7 +206,7 @@ export function Professores(){
                 <Text style={Prof.textosMaterias}>Português com Letícia</Text>
                 <Pressable onPress={() => window.open('https://www.youtube.com/c/Portugu%C3%AAscomLet%C3%ADcia', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>🚀 PORTUGUÊS COMPLETO | Sua aprovação está aqui! Curso completo, do básico ao avançado, com videoaulas exclusivas. Mais de 150 aulas aprofundadas e objetivas com foco em concursos públicos. Resumos em PDF, tabelinhas de revisão, mais de 1.000 questões comentadas de forma detalhada e plano de estudos. Módulos bônus de interpretação de textos, redação e organização dos estudos.</Text>
+                  <Text style={Prof.biografia}>🚀 PORTUGUÊS COMPLETO | Sua aprovação está aqui! Curso completo, do básico ao avançado, com videoaulas exclusivas. Mais de 150 aulas aprofundadas e objetivas com foco em concursos públicos.</Text>
                 </Pressable>
               </View>
             </View>
@@ -206,7 +227,7 @@ export function Professores(){
               </View>
             </View>
 
-            <Text style={Prof.Materias}>História</Text>
+            <Text style={Prof.Materias}>História, Sociologia e Filosofia</Text>
 
             <View style={Prof.professores}>
               <Image
@@ -222,8 +243,6 @@ export function Professores(){
               </View>
             </View>
 
-            <Text style={Prof.Materias}>Sociologia e Filosofia</Text>
-
             <View style={Prof.professores}>
               <Image
               style={Prof.Perfil}
@@ -238,22 +257,7 @@ export function Professores(){
               </View>
             </View>
 
-            <Text style={Prof.Materias}>Literatura</Text>
-
-            <View style={Prof.professores}>
-              <Image
-              style={Prof.Perfil}
-              source={require('../../assets/Professores/AlencarProfile.jpg')}
-              />
-              <View>
-                <Text style={Prof.textosMaterias}>Literatura com Alencar</Text>
-                <Pressable onPress={() => window.open('https://www.youtube.com/@LiteraturacomAlencar', 'Vestibular')}>
-                  <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>Olá, meu nome é Alencar Schueroff. Sou doutor em Literatura pela Universidade Federal de Santa Catarina (UFSC) e professor de Ensino Médio e Pré-Vestibulares há mais de 20 anos.                                                                                                                                                                                   Com minhas videoaulas de Literatura, ajudo você em provas, mostrando e ensinando o que mais cai em Literatura no Enem, em vestibulares e concursos  em geral, através de assuntos como: conceitos básicos, Escolas Literárias e resumos de obras literárias. </Text>
-                </Pressable>
-              </View>
-            </View>
-
+            
             <Text style={Prof.Materias}>Inglês</Text>
 
             <View style={Prof.professores}>
@@ -265,7 +269,7 @@ export function Professores(){
                 <Text style={Prof.textosMaterias}>PROFESSOR KENNY</Text>
                 <Pressable onPress={() => window.open('https://www.youtube.com/@PROFESSORKENNYOFICIAL', 'Vestibular')}>
                   <Text style={Prof.textosMaterias}>Canal Youtube</Text>
-                  <Text style={Prof.biografia}>O Professor Kenny é nativo do Canadá e reside no Brasil em definitivo com sua esposa brasileira desde os 23 anos. Aqui, ele acumulou vasta experiência como professor de inglês, desenvolvendo uma metodologia singular e revolucionária que garante o aprendizado definitivo da língua.</Text>
+                  <Text style={Prof.biografia}>O Professor Kenny é nativo do Canadá e reside no Brasil. Aqui, ele acumulou vasta experiência como professor de inglês, desenvolvendo uma metodologia singular e revolucionária que garante o aprendizado definitivo da língua.</Text>
                 </Pressable>
               </View>
             </View>
