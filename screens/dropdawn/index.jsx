@@ -1,7 +1,19 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useState } from 'react';
+import { apiConfig } from '../../utils/api';
 
-function BasicExample() {
+function BasicExample({funcao}) {
+
+  const [materias, setMaterias] = useState([])
+
+  useEffect(() =>{
+    apiConfig.get('/materia/').then((res)=>{
+      console.log(res.data)
+      //setMaterias(res.data)
+    })
+  },[])
+
   return (
     <Dropdown>
       <Dropdown.Toggle variant="primary" id="dropdown-basic">
@@ -9,6 +21,10 @@ function BasicExample() {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
+      {materias.map((materia, i)=>{
+        return <Dropdown.Item href={`#/action-${i}`}>{materia}</Dropdown.Item>
+      })}
+
       <Dropdown.Item href="#/action-1">Matemática</Dropdown.Item>
       <Dropdown.Item href="#/action-2">Física</Dropdown.Item>
       <Dropdown.Item href="#/action-3">Química</Dropdown.Item>

@@ -1,11 +1,6 @@
 import { StyleSheet } from "react-native";
 
 export const card = StyleSheet.create({
-
-    root: {
-
-    },
-
     questoes: {
         gap: 30,
         borderRadius: 20,

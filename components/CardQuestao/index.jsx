@@ -1,8 +1,19 @@
 import { card } from "./style";
 import { View, Text, Pressable } from "react-native";
 import { Icon } from "react-native-elements";
+import { useEffect, useState } from 'react';
+import { apiConfig } from '../../utils/api';
 
-export function CardQuestoes(){
+export function CardQuestoes({materia}){
+
+    const [questoes, setQuestoes] = useState([]);
+
+  useEffect(() =>{
+    apiConfig.get(`/questao/${materia}`).then((res)=>{
+        setQuestoes(res.data)
+    })
+  },[])
+    
     return(
         <View style={card.root}>
         <View style={card.questoes}>

@@ -4,7 +4,6 @@ import Cabecalho from "../../components/header";
 import { ScrollView } from "react-native-gesture-handler";
 import FooterComponent from "../../components/footer";
 import { Botoes } from "../../components/Botoes";
-import BasicExample from "../../components/accordion";
 
 
 
