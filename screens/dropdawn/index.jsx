@@ -5,14 +5,7 @@ import { apiConfig } from '../../utils/api';
 
 function BasicExample({funcao}) {
 
-  const [materias, setMaterias] = useState([])
-
-  useEffect(() =>{
-    apiConfig.get('/materia/').then((res)=>{
-      console.log(res.data)
-      //setMaterias(res.data)
-    })
-  },[])
+  const [materias, setMaterias] = useState('')
 
   return (
     <Dropdown>
