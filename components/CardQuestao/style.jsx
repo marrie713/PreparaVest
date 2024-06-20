@@ -23,4 +23,13 @@ export const card = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center'
     },
+
+    alternativas: {
+        backgroundColor: '#38b6ff',
+        width: 35,
+        height: 35,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 6
+    }
 })

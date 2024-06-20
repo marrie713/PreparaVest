@@ -13,12 +13,8 @@ export const estiloquestoes = StyleSheet.create({
 
     espacopv:{
         marginTop: 110,
-        marginBottom: 100
-    },
-
-    filtroMaterias: {
-        marginTop: 100,
-        marginLeft: 40
+        marginBottom: 100,
+        flexDirection: 'row'
     },
 
     textmateria: {

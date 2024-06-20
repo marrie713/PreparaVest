@@ -1,71 +1,68 @@
 import { card } from "./style";
-import { Icon } from "react-native-elements";
 import { useEffect, useState } from 'react';
 import { apiConfig } from '../../utils/api';
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Pressable} from 'react-native';
+import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Pressable } from 'react-native';
+import { estiloquestoes } from "../../screens/Questoes/style";
+import BasicExample from "../../screens/dropdawn";
+import KollektifBold from '../../assets/fonts/Kollektif-Bold.ttf';
+import Kollektif from '../../assets/fonts/Kollektif.ttf';
+import * as Font from 'expo-font';
+import QuestaoVerificada from "../VerificarQuestoes";
 
-export function CardQuestoes({materia}){
 
-    const [questoes, setQuestoes] = useState([]);
+export function CardQuestoes() {
+  const [questoes, setQuestoes] = useState([]);
+  const [materia, setMateria] = useState('matemática');
+  
 
-  useEffect(() =>{
-    apiConfig.get(`/questao/${materia}`).then((res)=>{
-        setQuestoes(res.data)
-    })
-  },[])
+  // useEffect(() => {
+  //   async function loadFonts() {
+  //     await Font.loadAsync({
+  //       KollektifBold: KollektifBold,
+  //       Kollektif: Kollektif,
+  //     });
+  //     setFontsLoaded(true);
+  //   }
 
-  const Item = ({title}) => (
-    <View style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
+  //   loadFonts();
+  // }, []);
+
+  useEffect(() => {
+    console.log(materia);
+    apiConfig.get(`/questao/${materia}`).then((res) => {
+      setQuestoes(res.data);
+    });
+  }, [materia]);
+
+  function mudarMateria(novaMateria) {
+    setMateria(novaMateria);
+  }
+
+  return (
+    <View style={{ flexDirection: 'row', gap: 50 }}>
+      <View style={card.questoes}>
+        <View style={{ flexDirection: 'row', justifyContent: 'center', gap: 40 }}>
+          <Text style={card.titulo}>Questões</Text>
+        </View>
+
+        <SafeAreaView>
+          <FlatList
+            data={questoes}
+            keyExtractor={item => item.id}
+            renderItem={({ item }) => {
+              <QuestaoVerificada enunciado={item.enunciado} alternativas={[item.a, item.b, item.c, item.d, item.e]} correta={item.correta}/>
+            }}
+          />
+        </SafeAreaView>
+      </View>
+
+      <View>
+        <Text style={estiloquestoes.textmateria}>Selecione a matéria</Text>
+        <BasicExample funcao={mudarMateria} />
+      </View>
     </View>
   );
-    
-    return(
-        <View style={card.root}>
-        <View style={card.questoes}>
-            <View style={{flexDirection: 'row', justifyContent: 'center', gap: 40}}>
-                    <Text style={card.titulo}>Questões</Text>
-            </View>
-
-            <SafeAreaView style={styles.container}>
-            <FlatList
-                data={questoes}
-                keyExtractor={item => item.id}
-                renderItem={({item}) => {
-                   return <Text>{item.enunciado}</Text>
-                }}
-            />
-            </SafeAreaView>
-        
-                </View>
-            </View>
-    )
 }
 
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      marginTop: StatusBar.currentHeight || 0,
-    },
-    item: {
-        shadowColor: "#000",
-        shadowOffset: {
-        width: 0,
-        height: 2,
-        },
-        shadowOpacity: 0.50,
-        shadowRadius: 12.00,
-        elevation: 15,
-        padding: 10,
-        borderRadius: 10,
-
-        padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16,
-    },
-    title: {
-      fontSize: 32,
-    },
-  });
