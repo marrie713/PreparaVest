@@ -40,7 +40,10 @@ export default function Cabecalho(){
                 <Text style={{fontSize: 22, fontFamily: 'KollektifBold'}} onPress={()=> navigation.navigate("Pagina Enem")}>Enem</Text>
                 <Text style={{fontSize: 22, fontFamily: 'KollektifBold'}}>Sobre nós</Text>
             </View>
-            <Pressable onPress={() => setModalVisible(true)}>
+            <Pressable 
+            //onPress={() => setModalVisible(true)}
+            onPress={()=> navigation.navigate("Login")}
+            >
                 <Icon
                     name='person'
                     type='material'

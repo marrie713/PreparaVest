@@ -5,28 +5,14 @@ import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Pressable } from 'react-native';
 import { estiloquestoes } from "../../screens/Questoes/style";
 import BasicExample from "../../screens/dropdawn";
-import KollektifBold from '../../assets/fonts/Kollektif-Bold.ttf';
-import Kollektif from '../../assets/fonts/Kollektif.ttf';
-import * as Font from 'expo-font';
-import QuestaoVerificada from "../VerificarQuestoes";
 
 
 export function CardQuestoes() {
   const [questoes, setQuestoes] = useState([]);
   const [materia, setMateria] = useState('matemática');
-  
+  const [selectedOptions, setSelectedOptions] = useState({});
+  const [correctAnswers, setCorrectAnswers] = useState({});
 
-  // useEffect(() => {
-  //   async function loadFonts() {
-  //     await Font.loadAsync({
-  //       KollektifBold: KollektifBold,
-  //       Kollektif: Kollektif,
-  //     });
-  //     setFontsLoaded(true);
-  //   }
-
-  //   loadFonts();
-  // }, []);
 
   useEffect(() => {
     console.log(materia);
@@ -39,6 +25,11 @@ export function CardQuestoes() {
     setMateria(novaMateria);
   }
 
+  function handleOptionPress(itemId, option, correctOption) {
+    setSelectedOptions(prev => ({ ...prev, [itemId]: option }));
+    setCorrectAnswers(prev => ({ ...prev, [itemId]: correctOption === option }));
+  }
+
   return (
     <View style={{ flexDirection: 'row', gap: 50 }}>
       <View style={card.questoes}>
@@ -46,12 +37,38 @@ export function CardQuestoes() {
           <Text style={card.titulo}>Questões</Text>
         </View>
 
-        <SafeAreaView>
+        <SafeAreaView style={styles.container}>
           <FlatList
             data={questoes}
             keyExtractor={item => item.id}
             renderItem={({ item }) => {
-              <QuestaoVerificada enunciado={item.enunciado} alternativas={[item.a, item.b, item.c, item.d, item.e]} correta={item.correta}/>
+              const isSelectedOptionCorrect = correctAnswers[item.id];
+              const selectedOption = selectedOptions[item.id];
+              return (
+                <View style={{ gap: 15, overflow: 'hidden', fontFamily: 'Kollektif' }}>
+                  <View>
+                    <Text style={{ width: 600 }}>{item.enunciado}</Text>
+                  </View>
+                  <View style={{ marginBottom: 50, gap: 8 }}>
+                    {['a', 'b', 'c', 'd', 'e'].map((option) => (
+                      <View style={{ flexDirection: 'row' }} key={option}>
+                        <Pressable
+                          style={card.alternativas}
+                          onPress={() => handleOptionPress(item.id, option, item.correta)}
+                        >
+                          <Text>{option.toUpperCase()}</Text>
+                        </Pressable>
+                        <Text> {item[option]}</Text>
+                      </View>
+                    ))}
+                    {selectedOption && (
+                      <Text style={isSelectedOptionCorrect ? styles.correctText : styles.incorrectText}>
+                        {isSelectedOptionCorrect ? 'Correto!' : 'Errado!'}
+                      </Text>
+                    )}
+                  </View>
+                </View>
+              );
             }}
           />
         </SafeAreaView>
@@ -65,4 +82,35 @@ export function CardQuestoes() {
   );
 }
 
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight || 0,
+  },
+  item: {
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.50,
+    shadowRadius: 12.00,
+    elevation: 15,
+    padding: 10,
+    borderRadius: 10,
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+  },
+  title: {
+    fontSize: 32,
+  },
+  correctText: {
+    color: 'green',
+    marginTop: 10,
+  },
+  incorrectText: {
+    color: 'red',
+    marginTop: 10,
+  },
+});

@@ -18,16 +18,7 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-    TextInput: {
-      backgroundColor: "#d9d9d9",
-      height: 50,
-      width: 280,
-      margin: 14,
-      borderRadius: 25,
-      padding:20,
-      color: '#797976',
-      fontSize: 18
-    },
+
     botao: {
       height: 50,
       width: 100,
