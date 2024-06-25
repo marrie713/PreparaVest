@@ -1,6 +1,5 @@
 import { View, TextInput, TouchableOpacity, Text, Image, Pressable, Alert, StyleSheet } from "react-native";
 import { styles } from "./style";
-import { color } from "react-native-elements/dist/helpers";
 import { useNavigation } from '@react-navigation/native';
 import { useEffect, useState } from "react";
 import { Input } from "react-native-elements";
@@ -8,6 +7,7 @@ import { Input } from "react-native-elements";
 export default function Login() {
 
    const navigation = useNavigation();
+   
 
       //State usado exclusivamente para controlar o icone e o efeito de secureTextEntry no campo senha
       const [passwordVisible, SetPasswordVisible] = useState(true)
